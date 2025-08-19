@@ -4,15 +4,15 @@ public class Cliente {
     private  String nome;
     private int idade;
     private String CPF;
-    private String endereço;
     private String telefone;
+    private Endereco endereco;
 
-    public Cliente(String nome, int idade, String CPF, String endereço, String telefone) {
+    public Cliente(String nome, int idade, String CPF, String telefone, Endereco endereco) {
         this.nome = nome;
         this.idade = idade;
         this.CPF = CPF;
-        this.endereço = endereço;
         this.telefone = telefone;
+        this.endereco = endereco;
     }
 
     public String getNome() {
@@ -39,13 +39,6 @@ public class Cliente {
         this.CPF = CPF;
     }
 
-    public String getEndereço() {
-        return endereço;
-    }
-
-    public void setEndereço(String endereço) {
-        this.endereço = endereço;
-    }
 
     public String getTelefone() {
         return telefone;
@@ -55,11 +48,19 @@ public class Cliente {
         this.telefone = telefone;
     }
 
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
     public void exibirDados() {
         System.out.println("Nome: " + this.nome);
         System.out.println("Idade: " + this.idade);
         System.out.println("CPF: " + this.CPF);
-        System.out.println("Endereço: " + this.endereço);
         System.out.println("Telefone: " + this.telefone);
+        System.out.println("Endereço: " + this.endereco.getRua() + ", " + this.endereco.getNumero() + ", " + this.endereco.getCidade());
     }
 }
