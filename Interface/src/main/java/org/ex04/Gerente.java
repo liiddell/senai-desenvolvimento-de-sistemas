@@ -26,6 +26,6 @@ public class Gerente extends CargoDeConfianca implements Contratacao {
                 "Salario Final: " + (this.getSalarioBase()*this.bonificacao.getValor()) + "\n";
     }
 
-    
+
 }
 
