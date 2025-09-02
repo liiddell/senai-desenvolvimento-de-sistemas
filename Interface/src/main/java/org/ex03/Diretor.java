@@ -1,4 +1,4 @@
-package org.polimorfismo3;
+package org.ex03;
 
 public class Diretor extends Funcionario implements Contratacao {
     private double premio = 0.2;

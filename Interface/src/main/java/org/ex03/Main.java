@@ -1,4 +1,4 @@
-package org.polimorfismo3;
+package org.ex03;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,7 +7,7 @@ public class Main {
 
         System.out.println(diretor);
         System.out.println(motoboy);
-        
+
         diretor.admitir(motoboy);
         diretor.demitir(motoboy);
     }

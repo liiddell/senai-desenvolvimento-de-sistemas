@@ -1,4 +1,4 @@
-package org.polimorfismo3;
+package org.ex03;
 
 public class Motoboy extends Funcionario {
     private String carteiraDeHabilitacao;

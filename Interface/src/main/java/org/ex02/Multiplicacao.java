@@ -1,4 +1,4 @@
-package org.polimorfismo2;
+package org.ex02;
 
 public class Multiplicacao implements OperacaoMatematica {
     @Override

@@ -1,4 +1,4 @@
-package org.polimorfismo;
+package org.ex01;
 
 public class Galo implements Animal {
 

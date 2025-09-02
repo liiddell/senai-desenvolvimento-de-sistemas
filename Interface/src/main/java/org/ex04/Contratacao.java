@@ -1,4 +1,4 @@
-package org.polimorfismo3;
+package org.ex04;
 
 public interface Contratacao {
     public void admitir(Funcionario funcionario);

@@ -1,4 +1,4 @@
-package org.polimorfismo3;
+package org.ex03;
 
 public enum Setor {
     RECURSOS_HUMANOS ("Recursos Humanos"),

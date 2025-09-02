@@ -1,20 +1,14 @@
-package org.polimorfismo3;
+package org.ex04;
 
 public abstract class Funcionario {
     protected String nome, dataNascimento;
-    protected Sexo sexo;
-    protected Setor setor;
     protected double salarioBase;
 
-    public Funcionario(String nome, String dataNascimento, Sexo sexo, Setor setor, double salarioBase) {
+    public Funcionario(String nome, String dataNascimento, double salarioBase) {
         this.nome = nome;
         this.dataNascimento = dataNascimento;
-        this.sexo = sexo;
-        this.setor = setor;
         this.salarioBase = salarioBase;
     }
-
-    public abstract double getSalarioFinal();
 
     public String getNome() {
         return nome;
@@ -32,22 +26,6 @@ public abstract class Funcionario {
         this.dataNascimento = dataNascimento;
     }
 
-    public Sexo getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(Sexo sexo) {
-        this.sexo = sexo;
-    }
-
-    public Setor getSetor() {
-        return setor;
-    }
-
-    public void setSetor(Setor setor) {
-        this.setor = setor;
-    }
-
     public double getSalarioBase() {
         return salarioBase;
     }
@@ -56,5 +34,12 @@ public abstract class Funcionario {
         this.salarioBase = salarioBase;
     }
 
-
+    @Override
+    public String toString() {
+        return "Funcionario:\n" +
+                "Nome: " + this.nome + "\n" +
+                "Data de Nascimento: " + this.dataNascimento + "\n" +
+                "Salario Base: " + this.salarioBase + "\n";
+    }
 }
+
