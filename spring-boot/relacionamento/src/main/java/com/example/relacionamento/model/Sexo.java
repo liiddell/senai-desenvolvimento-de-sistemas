@@ -1,13 +1,12 @@
 package com.example.relacionamento.model;
 
-public enum Setor {
-    ENGENHARIA("Engenharia"),
-    SAUDE("Saúde"),
-    JURIDICO("Jurídico");
+public enum Sexo {
+    MASCULINO("Masculino"),
+    FEMININO("Feminino");
 
     private final String texto;
 
-    Setor(String nome) {
+    Sexo(String nome) {
         this.texto = nome;
     }
 
