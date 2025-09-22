@@ -6,6 +6,7 @@ import java.util.UUID;
 
 @Entity
 @Table (name = "tab_funcionarios")
+//@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Funcionario {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)

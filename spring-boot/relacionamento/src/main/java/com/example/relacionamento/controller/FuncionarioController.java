@@ -21,6 +21,7 @@ public class FuncionarioController {
     public List<Funcionario> listar() {
         return funcionarioRepository.findAll();
     }
+
     @PostMapping
     public ResponseEntity<Funcionario> salvar(@RequestBody Funcionario funcionario) {
         funcionarioRepository.save(funcionario);
