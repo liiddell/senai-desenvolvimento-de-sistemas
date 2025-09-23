@@ -20,7 +20,7 @@ public class ClienteService {
 
     public Cliente salvar(Cliente cliente) {
         if (clienteRepository.findByProtocoloAtendimento(cliente.getProtocoloAtendimento()).isPresent()) {
-            throw new IllegalArgumentException("Cliente já existe com este protocolo de atendimento.");
+            throw new RuntimeException("Cliente já existe com este protocolo de atendimento.");
         }
         return clienteRepository.save(cliente);
     }
