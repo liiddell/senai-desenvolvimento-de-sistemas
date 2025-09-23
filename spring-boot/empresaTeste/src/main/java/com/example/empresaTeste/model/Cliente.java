@@ -10,7 +10,7 @@ public class Cliente {
     private Long id;
     @Column(name = "nome", nullable = false, length = 100)
     private String nome;
-    @Column(name = "cpf", nullable = false, unique = true, length = 11)
+    @Column(name = "dataNascimento", nullable = false, length = 20)
     private String dataNascimento;
     @Column(name = "protocolo_atendimento", nullable = false, unique = true, length = 20)
     private String protocoloAtendimento;
