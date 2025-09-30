@@ -18,16 +18,16 @@ public class Aluno {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column (name = nome, nullable = false, length = 100)
+    @Column (nullable = false, length = 100)
     private String nome;
 
-    @Column (name = telefone, nullable = false, length = 15)
+    @Column (nullable = false, length = 15)
     private String telefone;
 
-    @Column (name = email, nullable = false, length = 100, unique = true)
+    @Column (nullable = false, length = 100, unique = true)
     private String email;
 
-    @Column (name = senha, nullable = false, length = 100)
+    @Column (nullable = false, length = 100)
     private String senha;
 
 
