@@ -19,12 +19,16 @@ public class Endereco {
 
     @Column(nullable = false)
     private String cep;
+
     @Column(nullable = false)
     private String logradouro;
+
     @Column(nullable = false)
     private String numero;
+
     @Column(nullable = false)
     private String cidade;
+    
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private UnidadeFederativa uf;
