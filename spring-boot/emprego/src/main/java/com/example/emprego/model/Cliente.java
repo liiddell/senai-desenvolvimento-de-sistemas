@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-
 @Entity
 @Table(name = "tab_cliente")
 public class Cliente{

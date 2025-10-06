@@ -21,7 +21,7 @@ public class FuncionarioController {
     }
 
     @PostMapping
-    public ResponseEntity<Map<String, Object>> salvar(Funcionario funcionario){
+    public ResponseEntity<Map<String, Object>> salvar(@RequestBody Funcionario funcionario){
         funcionarioServices.salvarFuncionario(funcionario);
         return ResponseEntity
                 .status(201)
