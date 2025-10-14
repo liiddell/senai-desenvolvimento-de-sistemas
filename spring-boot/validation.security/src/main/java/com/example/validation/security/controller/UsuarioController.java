@@ -32,6 +32,10 @@ public class UsuarioController {
     public ResponseEntity<Map<String, Object>> salvar(@Valid @RequestBody UsuarioRequestDTO usuarioRequestDTO) {
         UsuarioModel usuario = usuarioServices.salvarUsuario(usuarioRequestDTO);
 
+
+        // Gera um endpoint para carregar de dados do novo usuário
+        // localhost:8080/usuarios/1
+
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest()
                 .path("/{id}")
