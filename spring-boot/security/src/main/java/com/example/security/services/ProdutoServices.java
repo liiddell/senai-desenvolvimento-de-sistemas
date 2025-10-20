@@ -2,30 +2,32 @@ package com.example.security.services;
 
 import com.example.security.dto.ClienteRequestDTO;
 import com.example.security.dto.ClienteResponseDTO;
+import com.example.security.dto.ProdutoRequestDTO;
+import com.example.security.dto.ProdutoResponseDTO;
 import com.example.security.model.ClienteModel;
-import com.example.security.repository.ClienteRepository;
+import com.example.security.model.ProdutoModel;
+import com.example.security.repository.ProdutorRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-public class ClienteServices {
+public class ProdutoServices {
     @Autowired
-    private ClienteRepository clienteRepository;
+    private ProdutorRepository produtorRepository;
 
-    public List<ClienteResponseDTO> listar() {
-        return clienteRepository.findAll()
+    public List<ProdutoResponseDTO> listar() {
+        return produtorRepository.findAll()
                 .stream()
-                .map(c -> new ClienteResponseDTO(c.getNome(),c.getEmail(), c.getTelefone()))
+                .map(p -> new ClienteResponseDTO(p.getNome(),p.getLote(), p.getValidade(), p.getCategoria()))
                 .toList();
     }
 
-    public ClienteModel salvar(@Valid ClienteRequestDTO dto) {
-        if (clienteRepository.findByEmail(dto.getEmail()).isPresent()) {
-            throw new IllegalArgumentException("Email já cadastrado");
+    public ProdutoModel salvar(@Valid ProdutoRequestDTO dto) {
+        if (produtorRepository.findByLote(dto.getLote()).isPresent()) {
+            throw new IllegalArgumentException("Lote já cadastrado");
         }
 
         ClienteModel cliente = new ClienteModel();

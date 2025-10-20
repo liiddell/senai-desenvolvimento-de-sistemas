@@ -9,8 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Entity
-@Table(name = "tab_cliente")
-public class ClienteModel {
+@Table(name = "tab_produto")
+public class ProdutoModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -18,15 +18,15 @@ public class ClienteModel {
     @Column(nullable = false, length = 100)
     private String nome;
 
-    @Column(nullable = false, unique = true, length = 100)
-    private String email;
+    @Column(nullable = false, length = 50, unique = true)
+    private String lote;
 
-    @Column(nullable = false, length = 15)
-    private String telefone;
+    @Column(nullable = false, length = 20)
+    private String validade;
 
-    @Column(nullable = false, length = 50)
-    private String formaPagamento;
+    @Column(nullable = false, length = 100)
+    private String categoria;
 
-    @Column(nullable = false, length = 200)
-    private String endereco;
+    @Column(nullable = false)
+    private int quantidade;
 }
