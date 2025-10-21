@@ -12,4 +12,5 @@ public class ProdutoResponseDTO {
     private String lote;
     private String validade;
     private String categoria;
+    private int quantidade;
 }

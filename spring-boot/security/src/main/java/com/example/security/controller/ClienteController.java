@@ -2,8 +2,6 @@ package com.example.security.controller;
 
 import com.example.security.dto.ClienteRequestDTO;
 import com.example.security.dto.ClienteResponseDTO;
-import com.example.security.dto.FuncionarioRequestDTO;
-import com.example.security.dto.FuncionarioResponseDTO;
 import com.example.security.services.ClienteServices;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;

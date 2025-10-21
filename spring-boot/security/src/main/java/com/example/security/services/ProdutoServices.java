@@ -1,10 +1,7 @@
 package com.example.security.services;
 
-import com.example.security.dto.ClienteRequestDTO;
-import com.example.security.dto.ClienteResponseDTO;
 import com.example.security.dto.ProdutoRequestDTO;
 import com.example.security.dto.ProdutoResponseDTO;
-import com.example.security.model.ClienteModel;
 import com.example.security.model.ProdutoModel;
 import com.example.security.repository.ProdutorRepository;
 import jakarta.validation.Valid;
@@ -21,7 +18,7 @@ public class ProdutoServices {
     public List<ProdutoResponseDTO> listar() {
         return produtorRepository.findAll()
                 .stream()
-                .map(p -> new ClienteResponseDTO(p.getNome(),p.getLote(), p.getValidade(), p.getCategoria()))
+                .map(p -> new ProdutoResponseDTO(p.getNome(), p.getLote(), p.getValidade(), p.getCategoria(), p.getQuantidade()))
                 .toList();
     }
 
@@ -30,38 +27,38 @@ public class ProdutoServices {
             throw new IllegalArgumentException("Lote já cadastrado");
         }
 
-        ClienteModel cliente = new ClienteModel();
-        cliente.setNome(dto.getNome());
-        cliente.setEmail(dto.getEmail());
-        cliente.setTelefone(dto.getTelefone());
-        cliente.setFormaPagamento(dto.getFormaPagamento());
-        cliente.setEndereco(dto.getEndereco());
+        ProdutoModel produto = new ProdutoModel();
+        produto.setNome(dto.getNome());
+        produto.setLote(dto.getLote());
+        produto.setValidade(dto.getValidade());
+        produto.setCategoria(dto.getCategoria());
+        produto.setQuantidade(dto.getQuantidade());
 
-        clienteRepository.save(cliente);
-        return cliente;
+        produtorRepository.save(produto);
+        return produto;
     }
 
-    public ClienteModel atualizar (Long id, @Valid ClienteRequestDTO dto) {
-        if (!clienteRepository.existsById(id)){
-            throw new RuntimeException("Funcionário não encontrado");
+    public ProdutoModel atualizar (Long id, @Valid ProdutoRequestDTO dto) {
+        if (!produtorRepository.existsById(id)){
+            throw new RuntimeException("Produto não encontrado");
         }
 
-        ClienteModel cliente = new ClienteModel();
+        ProdutoModel produto = new ProdutoModel();
 
-        cliente.setNome(dto.getNome());
-        cliente.setEmail(dto.getEmail());
-        cliente.setTelefone(dto.getTelefone());
-        cliente.setFormaPagamento(dto.getFormaPagamento());
-        cliente.setEndereco(dto.getEndereco());
+        produto.setNome(dto.getNome());
+        produto.setLote(dto.getLote());
+        produto.setValidade(dto.getValidade());
+        produto.setCategoria(dto.getCategoria());
+        produto.setQuantidade(dto.getQuantidade());
 
-        clienteRepository.save(cliente);
-        return cliente;
+        produtorRepository.save(produto);
+        return produto;
     }
 
     public void deletar (Long id){
-        if (!clienteRepository.existsById(id)){
-            throw new IllegalArgumentException("Funcionário não encontrado");
+        if (!produtorRepository.existsById(id)){
+            throw new IllegalArgumentException("Produto não encontrado");
         }
-        clienteRepository.deleteById(id);
+        produtorRepository.deleteById(id);
     }
 }
