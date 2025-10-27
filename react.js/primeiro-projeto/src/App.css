@@ -7,15 +7,5 @@
   justify-content: center;
   align-items: center;
   display: flex;
-}
-
-.nome {
-  color: aliceblue;
-  width: 80%;
-  flex: auto;
-  background-color: rgb(26, 51, 197);
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  border-radius: 32px;
+  flex-direction: column;
 }

@@ -1,14 +1,12 @@
-// src\components\AdicionarUsuario\index.jsx
+// src/components/AdicionarUsuario/index.jsx
 
-
-import '.style.css'
-import { use, useState } from 'react'
+import './style.css'
+import { useState } from 'react'
 
 function AdicionarUsuario() {
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
-
-    const [usuarios, setUsuarios] = useState([])
+    const [usuarios, setUsuarios] = useState([]);
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -17,13 +15,13 @@ function AdicionarUsuario() {
             setNome('');
             setEmail('');
         }
-
-    }
+    };
 
     return (
-        <div>
+        <div className='adicionar-usuario-container'>
             <h2>Adicionar Usuário</h2>
-            <form onSubmit={handleAdicionarUsuario}>
+
+            <form onSubmit={handleSubmit}>
                 <input
                     type="text"
                     placeholder="Nome"
@@ -48,10 +46,7 @@ function AdicionarUsuario() {
                 ))}
             </ul>
         </div>
-
-    )
-
-
+    );
 }
 
-export default AdicionarUsuario
+export default AdicionarUsuario;
