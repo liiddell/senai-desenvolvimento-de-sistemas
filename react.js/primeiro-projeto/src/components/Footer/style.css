@@ -1,0 +1,13 @@
+/* src\components\Footer\style.css  */
+
+
+.footer-container {
+    background-color: rgb(7, 57, 90);
+    color: aliceblue;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

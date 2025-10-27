@@ -1,0 +1,21 @@
+#root {
+  max-width: 1280px;
+  margin: 0;
+  /* padding: 2rem; */
+  text-align: center;
+  flex: auto;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.nome {
+  color: aliceblue;
+  width: 80%;
+  flex: auto;
+  background-color: rgb(26, 51, 197);
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 32px;
+}
