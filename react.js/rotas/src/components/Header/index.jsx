@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
-import '.style.css';
+import './style.css';
 
 
 export default function Header() {
     return (
         <header className='header-container'>
-            <div>Gestão de funcionários</div>
+            <div className='logo'>Gestão de funcionários</div>
             <nav>
                 <Link to= "/">Home</Link>
                 <Link to= "/cadastrar">Cadastro</Link>

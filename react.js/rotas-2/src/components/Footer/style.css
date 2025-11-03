@@ -1,7 +1,8 @@
 .footer-container {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    background-color: #3a7c1f;
+    background-color: #1a4b84;;
     color: white;
     padding: 10px;
     text-align: center;
@@ -10,4 +11,5 @@
     position: fixed;
     width: 100%;
     bottom: 0;
+    gap: 16px;
 }

@@ -1,0 +1,38 @@
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3a7c1f;
+    color: white;
+    padding: 16px 32px; 
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    /* display: flex;  */
+}
+
+.logo {
+    margin-left: 24px;
+    font-size: 24px; 
+    font-weight: bold; 
+    letter-spacing: 1px; 
+}
+
+nav{
+    color: white;
+    padding: 16px;
+}
+
+a {
+  text-decoration: none;
+  padding: 8px 32px;
+  color: white;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  border-radius: 8px;
+}
+
+a:hover{
+    color: blue;
+    background-color: #92f83f
+}
