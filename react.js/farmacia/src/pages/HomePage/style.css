@@ -1,0 +1,116 @@
+.home-container {
+  font-family: "Inter", sans-serif;
+  color: #222;
+  background-color: #f7f9fb;
+}
+
+
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #d9f4e8, #bde0fe);
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 80px;
+  border-radius: 12px;
+  margin: 30px;
+}
+
+.hero-content {
+  max-width: 500px;
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  margin-bottom: 20px;
+}
+
+.hero-image img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background-color: #0f9d58;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #fff;
+  border: 1px solid #0f9d58;
+  color: #0f9d58;
+}
+
+/* PRODUCTS */
+.section {
+  margin: 50px 30px;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  color: #0f9d58;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.price {
+  color: #333;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+/* OFFERS */
+.offer-banner {
+  background: #0f9d58;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* TESTIMONIALS */
+.testimonial-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.testimonial-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+  min-width: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

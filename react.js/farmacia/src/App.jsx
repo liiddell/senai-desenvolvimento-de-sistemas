@@ -1,0 +1,29 @@
+import { useState } from 'react'
+import './App.css'
+import Footer from './components/Footer'
+import Header from './components/Header'
+import { Route, Routes } from 'react-router-dom'
+import SobreNos from './pages/SobreNosPage'
+import FaleConosco from './pages/FaleConoscoPage'
+import HomePage from './pages/HomePage'
+
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <>
+      <Header />
+      <main>
+        <Routes>
+          <Route path='/' element ={<HomePage />} />
+          <Route path='/sobre-nos' element={<SobreNos />} />
+          <Route path='/fale-conosco' element={<FaleConosco />} />
+        </Routes>
+      </main>
+      <Footer />
+    </>
+  )
+}
+
+export default App
