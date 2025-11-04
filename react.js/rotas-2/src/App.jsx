@@ -4,6 +4,7 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import { Route, Routes } from 'react-router-dom'
 import SobreNos from './pages/SobreNosPage'
+import FaleConosco from './pages/FaleConoscoPage'
 
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
         <Routes>
           <Route path='/' element />
           <Route path='/sobre-nos' element={<SobreNos />} />
-          <Route >
+          <Route path='/fale-conosco' element={<FaleConosco />} />
         </Routes>
       </main>
       <Footer />
