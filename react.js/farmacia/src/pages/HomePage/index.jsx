@@ -3,10 +3,11 @@ import Doctor from '../../assets/Doctor-PNG-Images.png'
 
 export default function HomePage() {
   const produtos = [
-    { name: "Máscara Cirúrgica", price: "R$ 25,00", img: "" },
-    { name: "Álcool em Gel 500ml", price: "R$ 15,90", img: "" },
-    { name: "Termômetro Digital", price: "R$ 49,90", img: "" },
-    { name: "Suplemento Vitamínico", price: "R$ 39,00", img: "" },
+    { name: "Máscara Cirúrgica", price: "R$ 25,00", img: "src/assets/mascara-cirurgica.png" },
+    { name: "Álcool em Gel 500ml", price: "R$ 15,90", img: "src/assets/alcool-gel.png" },
+    { name: "Termômetro Digital", price: "R$ 49,90", img: "src/assets/termometro.webp" },
+    { name: "Suplemento", price: "R$ 39,00", img: "src/assets/suplemento.webp" },
+    { name: "Suplemento", price: "R$ 39,00", img: "src/assets/suplemento-2.webp" },
   ]
 
   const depoimentos = [
