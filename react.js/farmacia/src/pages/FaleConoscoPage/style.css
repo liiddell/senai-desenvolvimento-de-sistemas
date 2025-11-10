@@ -1,8 +1,18 @@
+:root {
+  --drogasil-red: #E31E24;        /* Vermelho principal */
+  --drogasil-pink: #F2989B;       /* Rosa claro de apoio */
+  --drogasil-light: #FCEDED;      /* Fundo suave */
+  --drogasil-white: #FFFFFF;      /* Branco */
+  --drogasil-gray: #222222;       /* Texto principal */
+  --drogasil-border: #E0E0E0;     /* Bordas sutis */
+}
+
+
 .contato {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #f7f9fa 0%, #eef1f4 100%);
-  color: #444;
+  background: linear-gradient(135deg, var(--drogasil-light) 0%, var(--drogasil-pink) 100%);
+  color: var(--drogasil-gray);
   padding: 60px 30px;
   max-width: 900px;
   margin: 80px auto;
@@ -12,16 +22,11 @@
   transition: all 0.3s ease;
 }
 
-/* .contato:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.1);
-} */
-
 .contato h1 {
   font-size: 2.4rem;
-  color: #1c1c1c;
+  color: var(--drogasil-red);
   margin-bottom: 15px;
-  border-bottom: 3px solid #00a751;
+  border-bottom: 3px solid var(--drogasil-red);
   display: inline-block;
   padding-bottom: 8px;
   letter-spacing: 0.5px;
@@ -29,7 +34,7 @@
 
 .contato p {
   font-size: 1.05rem;
-  color: #444;
+  color: var(--drogasil-gray);
   margin-bottom: 24px;
   text-align: center;
 }
@@ -46,7 +51,6 @@
   gap: 20px;
 }
 
-
 .field {
   display: flex;
   flex-direction: column;
@@ -55,49 +59,44 @@
 
 .field span {
   font-weight: 600;
-  color: #00a751;
+  color: var(--drogasil-red);
   font-size: 0.95rem;
   text-align: left;
 }
 
-/* Padroniza inputs, textarea e select */
+
 .field input,
 .field textarea,
 .field select {
   padding: 12px 14px;
-  border: 1px solid #cbe8ff;
+  border: 1px solid var(--drogasil-border);
   border-radius: 8px;
   font-size: 1rem;
-  color: #333;
-  background: #fff;
+  color: var(--drogasil-gray);
+  background: var(--drogasil-white);
   transition: all 0.18s ease;
   resize: none;
 }
 
-.field input[type="number"] {
-  -moz-appearance: textfield;
-}
-
 .field input[type="file"] {
   padding: 10px 12px;
-  background: #fff;
+  border: 1px solid var(--drogasil-border);
+  background: var(--drogasil-white);
   border-radius: 8px;
-  border: 1px solid #cbe8ff;
 }
-
 
 .field input:focus,
 .field textarea:focus,
 .field select:focus,
 .field input[type="file"]:focus {
-  border-color: #00a751
-  box-shadow: 0 0 0 3px rgba(0, 119, 182, 0.12);
+  border-color: var(--drogasil-red);
+  box-shadow: 0 0 0 3px rgba(227, 30, 36, 0.15);
   outline: none;
 }
 
 
 .field [type="radio"] {
-  accent-color: #00a751;
+  accent-color: var(--drogasil-red);
   width: 1.1em;
   height: 1.1em;
   margin-right: 6px;
@@ -108,12 +107,12 @@
   cursor: default;
 }
 
-/* botão */
+
 .btn.primary {
   width: 100%;
   align-self: flex-start;
-  background: #00a751;
-  color: #fff;
+  background: var(--drogasil-red);
+  color: var(--drogasil-white);
   font-weight: 600;
   border: none;
   padding: 12px 28px;
@@ -124,9 +123,9 @@
 }
 
 .btn.primary:hover {
-  background: #005f8f;
+  background: #c8181d;
   transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 10px rgba(227, 30, 36, 0.2);
 }
 
 

@@ -1,46 +1,62 @@
+:root {
+
+  --drogasil-red: #E31E24;        /* Vermelho principal */
+  --drogasil-pink: #F2989B;       /* Rosa claro de apoio */
+  --drogasil-light: #FCEDED;      /* Fundo suave */
+  --drogasil-white: #FFFFFF;      /* Branco */
+  --drogasil-gray: #222222;       /* Texto principal */
+  --drogasil-border: #E0E0E0;     /* Bordas sutis */
+}
+
+/* HEADER */
 .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #edffe4;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    color: #202020;
-    padding: 16px 32px;
-    position: fixed;
-    width: 100%;
-    top: 0%;
-    /* display: flex;  */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--drogasil-light);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  color: var(--drogasil-gray);
+  padding: 16px 32px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s ease;
 }
 
 .logo img {
-    width: 52px;
-    height: 52px;
-    object-fit: contain;
-    margin-left: 24px;
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  margin-left: 24px;
 }
-
 
 nav {
-    display: flex;
-    gap: 32px;
-    margin-right: 24px;
+  display: flex;
+  gap: 32px;
+  margin-right: 24px;
 }
 
-
 nav a {
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #444;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--drogasil-gray);
+  transition: all 0.3s ease;
+  padding-bottom: 3px;
 }
 
 nav a:hover {
-    color: #dcffcc;
- 
+  color: var(--drogasil-red);
 }
 
 nav a.active {
-    border-bottom: 2px solid #0a5f79;
-    padding-bottom: 2px;
+  border-bottom: 2px solid var(--drogasil-red);
+  color: var(--drogasil-red);
+}
+
+/* Opcional: efeito de transparência ao rolar */
+.header-container.scrolled {
+  background-color: rgba(252, 237, 237, 0.95);
+  backdrop-filter: blur(6px);
 }
