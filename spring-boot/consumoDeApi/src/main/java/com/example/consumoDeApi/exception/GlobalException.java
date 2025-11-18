@@ -1,4 +1,4 @@
-package com.example.security.exception;
+package com.example.consumoDeApi.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
