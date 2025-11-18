@@ -2,7 +2,7 @@
 
 
 .footer-container {
-    background-color: rgb(7, 57, 90);
+    background: linear-gradient(239deg,rgba(0, 51, 102, 1) 0%, rgba(29, 137, 253, 1) 50%, rgba(151, 195, 222, 1) 100%);
     color: aliceblue;
     padding: 10px;
     text-align: center;

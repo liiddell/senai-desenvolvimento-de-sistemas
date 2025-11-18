@@ -1,7 +1,7 @@
 /* src\components\Header\style.css */
 
 .header-container {
-    background-color: rgb(7, 57, 90);
+    background: linear-gradient(90deg,rgba(0, 51, 102, 1) 0%, rgba(29, 137, 253, 1) 48%, rgba(0, 51, 102, 1) 84%);
     color: white;
     padding: 20px;
     position: fixed;
